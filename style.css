@@ -20,11 +20,14 @@ html, body {
   }
   
   body {
+    flex-direction: column;
+      display: flex;
       background-color: #232023;
       background-size: 400% 400%;
       margin: 0;
       height: 100%;
       animation: color 9s infinite ease-in-out;
+      flex-wrap: wrap;
   }
   @keyframes color {
     0%   { background: #be673a; }
@@ -65,17 +68,21 @@ h1:hover
 aside {
     margin-top: 2%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color:  white;
     max-width: 30vh;
     min-width: 30vh;
     align-self: flex-start;
     position: relative;
+    flex-wrap: wrap;
 
 }
 section{
+    width: 100%;
+    flex-direction: row;
     display: flex;
     height: 80%;
+    flex-wrap: wrap;
 }
 a{
     display:inline-block;
@@ -97,22 +104,25 @@ a{
     color: white;
 }
 .container{
-    align-self: stretch;
     display: flex;
     margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
-    width: 100%;
     background-color: white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    max-height: 90%;
+    width: 80%;
 }
 .container2{
-    align-self: stretch;
+    max-height: 90%;
     display: flex;
     margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
-    width: 100%;
+    width: 80%;
     background-color: #232023;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     flex-wrap: wrap;
@@ -125,16 +135,31 @@ a{
     margin-top: 2%;
     margin-left: 2%;
     margin-bottom: 2%;
+    flex-direction: column;
+    height: 90%;
+    width: 30%;
+    align-items:center;
+    justify-content: left;
+}
+.container .card1 img{
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
 }
 .container .card2{
+    flex-wrap: wrap;
     background-color: #232023;
     display: flex;
     margin-top: 2%;
     margin-left: 2%;
     margin-bottom: 2%;
     margin-right: 2%;
-    width: 100%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    flex-direction: column;
+    align-content: center;
+    min-width: 60%;
+    justify-content: center;
+    
 }
 .container2 .card2{
     background-color: #232023;
@@ -143,10 +168,14 @@ a{
     margin-left: 2%;
     margin-bottom: 2%;
     margin-right: 2%;
-    width: 100%;
+    max-width: 20%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
 }
 .container2 .card3{
+   flex-wrap: wrap;
+    justify-self:auto;
+    max-width: 20%;
     height: 35%;
     display: flex;
     margin-top: 2%;
@@ -154,9 +183,18 @@ a{
     margin-bottom: 2%;
     margin-right: 2%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    display: flex;
     transition: 0.5s ease-in-out;
+    align-items: center;
+    flex:content;
 }
+
+.container2 .card3 img{
+    display: block;
+    height: 100%;
+    width: 100%;
+} 
+
+
 .col {
     font-family: good;
     justify-content: center;
@@ -195,7 +233,9 @@ h2{
     color:white;
 }
 img .Capacitacion{
+    max-width: 10%;
     display: flex;
+    align-self:auto;
 }
 .container2 .card3:hover{
     transition: 0.5s ease-in-out;
